@@ -10,7 +10,7 @@ function Hand ({value, className, isWin}) {
     return (
         <>
             <div className={classNames}>
-                <HandIcon value={value} className='Hand' isWin={isWin}/>
+                <HandIcon value={value} className='Hand'/>
             </div>            
         </>
     )

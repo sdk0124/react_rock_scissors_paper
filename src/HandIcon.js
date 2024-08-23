@@ -10,8 +10,8 @@ const Img = {
     paper : paperImg
 };
 
-function HandIcon({value, className, isWin}) {
-    const imgClassName = (isWin === 1) ? `${className}-icon Winner` : `${className}-icon`;
+function HandIcon({value, className}) {
+    const imgClassName = `${className}-icon`;
 
     return (
         <>
