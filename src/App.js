@@ -1,8 +1,12 @@
 import { useState } from "react";
 import HandButton from "./HandButton";
-import Button from "./Button";
-import HandIcon from "./HandIcon";
+import Score from "./Score.js";
+import Box from "./Box.js";
 import { compareHand, getRandomNextHand } from "./support.js"
+
+import reset_img from "./assets/ic-reset.svg";
+
+import "./App.css";
 
 const INIT_HAND_VALUE = 'rock';
 const INIT_SCORE_VALUE = 0;
@@ -51,21 +55,22 @@ function App() {
 
   return (
     <>
-      <div>
-        <Button onClick={handleClearClick}>처음부터</Button>
-      </div>
-      <h3>{getResult(myHand, otherHand)}</h3>
-      <p>{myScore} : {otherScore}</p>
-      <div>
-        <HandIcon value={myHand}/>
-        <span>VS</span>
-        <HandIcon value={otherHand}/>
-      </div>
-      <p>승부 기록 : {gameHistory.join(', ')}</p>
-      <div>
-        <HandButton value='rock' onClick={handleButtonClick}/>
-        <HandButton value='scissor' onClick={handleButtonClick}/>
-        <HandButton value='paper' onClick={handleButtonClick}/>
+      <div className='App'>
+        <h1 className='App-heading'>가위바위보</h1>
+        <img className='App-reset' src={reset_img} alt='초기화' onClick={handleClearClick}/>
+        <div className='App-scores'>
+          <Score number={myScore} name='나' className='Score'/>
+          <div className='App-versus'>:</div>
+          <Score number={otherScore} name='상대' className='Score'/>
+        </div>
+        <div className='Box App-box'>
+          <Box myHandValue={myHand} otherHandValue={otherHand} History={gameHistory} Result={getResult(myHand, otherHand)}/>
+        </div>        
+        <div>
+          <HandButton className='HandButton' value='rock' onClick={handleButtonClick}/>
+          <HandButton className='HandButton' value='scissor' onClick={handleButtonClick}/>
+          <HandButton className='HandButton' value='paper' onClick={handleButtonClick}/>
+        </div>
       </div>
     </>
   );

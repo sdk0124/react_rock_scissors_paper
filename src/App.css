@@ -1,0 +1,56 @@
+.App {
+    position: relative;
+    width: 100%;
+    min-width: 575px;
+    max-width: 620px;
+    margin: 45px auto;
+    padding: 50px;
+    border-radius: 44px;
+    text-align: center;
+    background: #6f00ff;
+    background-color: #6f00ff;
+    box-shadow: 0 4.2px 2px #5900cc, 0 -4.2px 2px #8500ff;
+  }
+
+  .App-heading {
+    margin: 0 0 34px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 0 3px 0 #a875e9;
+    letter-spacing: 0.19px;
+    -webkit-text-stroke: 1px #fff;
+  }
+
+  .App-reset {
+    position: absolute;
+    top: 48px;
+    right: 49px;
+    cursor: pointer;
+  }
+
+  .App-scores>* {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .App-hands>* {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .App-scores>.App-versus {
+    margin: 0 7px;
+    color: #fff;
+    font-size: 64px;
+  }
+
+  .Box, .Box-inner {
+    border-radius: 35px;
+  }
+
+  .Box {
+    padding: 5px;
+    box-shadow: 0 3px 8px 0 rgba(56, 15, 110, 0.44);
+  }
